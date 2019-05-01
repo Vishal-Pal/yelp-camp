@@ -10,7 +10,6 @@ router.get("/register", function(req, res){
    res.render("register"); 
 });
 router.get("/login",function(req, res){
-   req.flash("error", "You must be Logged in to do that");
    res.render("login"); 
 });
 router.post("/register", function(req, res){
@@ -21,7 +20,7 @@ router.post("/register", function(req, res){
            res.redirect("/register");
        } 
        passport.authenticate("local")(req,res, function(){
-          req.flash("success", "Welcome "+ req.body.username);
+          req.flash("success", "Welcome to YelpCamp, "+ req.body.username+"!");
           res.redirect("/campgrounds"); 
        });
     });

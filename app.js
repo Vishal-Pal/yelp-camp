@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Vishal:tarushexp6@yelpcamp0-miwt1.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 var passport = require('passport'),
     LocalStrategy=require('passport-local'),
     User = require('./models/users'),
