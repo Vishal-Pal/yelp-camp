@@ -5,13 +5,15 @@
             <%= error %>
     </div>
 
-<h1>Login</h1>
+<h1 style="text-align:center">Login</h1>
 
 
-<form action="/login" method="POST">
-    <input type="text" name="username" placeholder="username"/>
-    <input type="password" name="password" placeholder="password"/>
-    <input type="submit" value="Log in"/>
+<form action="/login" method="POST" style="margin-left:33%;margin-right:30%">
+    <div class="form-group"><label>Username : </label><input type="text" class="form-control" style="width:100%" name="username" placeholder="username"/></div>
+    <div class="form-group"><label>Password : </label><input type="password" class="form-control" style="width:100%" name="password" placeholder="password"/></div>
+    <input type="submit" value="Log in" class="form-control  btn btn-dark" style="width:30%; margin-left:138px"/>
+    <p style="text-align:center; margin-top:20px">Don't have an account? </p>
+    <a class="form-control  btn btn-dark" style="width:30%; margin-left:138px" href="/register">Sign Up</a>
 </form>
 
 <% include partials/footer %>

@@ -4,12 +4,12 @@
         <%= error %>
 </div>
 
-<h1>Sign Up Form</h1>
+<h1 style="text-align:center">Sign Up</h1>
 
-<form action="/register" method="POST">
-    <input type="text" name="username" placeholder="username"/>
-    <input type="password" name="password" placeholder="password"/>
-    <button>Sign Up</button>
+<form action="/register" class="form-group" style="margin-left:33%;margin-right:30%" method="POST">
+    <div class="form-group"><label>Enter a Username : </label><input type="text" class="form-control" style="width:100%" name="username" placeholder="username"/></div>
+    <div class="form-group"><label>Enter a Password : </label><input type="password" class="form-control" style="width:100%" name="password" placeholder="password"/></div>
+    <input type="submit" value="Sign Up" class="form-control  btn btn-dark" style="width:30%; margin-left:138px"/>
 </form>
 
 <% include partials/footer %>
